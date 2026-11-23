@@ -1,0 +1,30 @@
+{
+  "name": "proofread-mcp",
+  "version": "0.1.0",
+  "private": true,
+  "description": "Proofread a text as a first reader meets it: an MCP server over stdio whose one tool scores each paragraph and sentence with Liquid AI's decision model.",
+  "type": "module",
+  "bin": {
+    "proofread-mcp": "./src/main.ts"
+  },
+  "files": [
+    "src",
+    "README.md"
+  ],
+  "engines": {
+    "bun": ">=1.4"
+  },
+  "scripts": {
+    "test": "bun test",
+    "typecheck": "bun --bun x tsc --noEmit",
+    "check": "bun run typecheck && bun run test"
+  },
+  "dependencies": {
+    "@modelcontextprotocol/server": "^2.3.1",
+    "zod": "^4"
+  },
+  "devDependencies": {
+    "@types/bun": "^1.4",
+    "typescript": "^7"
+  }
+}
